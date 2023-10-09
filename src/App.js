@@ -11,7 +11,7 @@ const todoList = [
   },
   {
     id: 3,
-    title: "Submit my assigment",
+    title: "Submit my assignment",
   },
   {
     id: 4,
@@ -26,9 +26,11 @@ function App() {
         <h1>Todo List</h1>
       </header>
         <ul>
-          {todoList.map(function (item) {
-            return <li>{item.id} {item.title}</li>;
-            })}
+          {todoList.map((item) => (
+            <li key={item.id}>
+              {item.id} {item.title}
+            </li>
+          ))}
         </ul>
     </div>
   );
