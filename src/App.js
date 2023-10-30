@@ -8,7 +8,7 @@ function App() {
   const [todoList, setTodoList] = React.useState([]);
 
  function addTodo (newTodo) {
-    setTodoList([...todoList, ...newTodo]);
+    setTodoList([...todoList, newTodo]);
  }
 
   return (
@@ -17,9 +17,6 @@ function App() {
         <h1>Todo List</h1>
       </header>
       <AddTodoForm onAddTodo={addTodo}/>
-      <p>
-        
-      </p>
       <TodoList todoList={todoList}/>
     </div>
   );
